@@ -20,7 +20,7 @@ const CrearEmpleado = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://backendadso-9600d18c52e1.herokuapp.com/api/empleados', empleado);
+      await axios.post('https://login-backend-lshl.onrender.com/api/empleados', empleado);
       navigate('/empleados');
     } catch (err) {
       console.error('Error al crear el empleado:', err);

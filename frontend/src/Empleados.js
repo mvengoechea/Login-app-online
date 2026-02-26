@@ -8,7 +8,7 @@ const Empleados = () => {
   useEffect(() => {
     const obtenerEmpleados = async () => {
       try {
-        const response = await axios.get('https://backendadso-9600d18c52e1.herokuapp.com/api/empleados');
+        const response = await axios.getaxios.get('https://login-backend-lshl.onrender.com/api/empleados');
         setEmpleados(response.data);
       } catch (err) {
         console.error('Error al obtener empleados:', err);
@@ -19,7 +19,7 @@ const Empleados = () => {
 
   const eliminarEmpleado = async (id) => {
     try {
-      await axios.delete(`https://backendadso-9600d18c52e1.herokuapp.com/api/empleados/${id}`);
+      await axios.delete(`https://login-backend-lshl.onrender.com/api/empleados/${id}`);
       setEmpleados(empleados.filter((empleado) => empleado._id !== id));
     } catch (err) {
       console.error('Error al eliminar el empleado:', err);

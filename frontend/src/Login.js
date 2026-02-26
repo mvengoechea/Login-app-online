@@ -10,7 +10,7 @@ const Login = ({ onLogin }) => {
 
     try {
       // Realiza la petición de login al backend con la URL correcta
-      const response = await axios.post('https://backendadso-9600d18c52e1.herokuapp.com/login', { nombre, clave });
+      const response = await axios.post('https://login-backend-lshl.onrender.com/login', { nombre, clave });
 
       if (response.data === 'Inicio de sesión satisfactorio!') {
         onLogin(); // Llamar a la función onLogin para cambiar el estado en App.js

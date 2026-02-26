@@ -17,7 +17,7 @@ const EditarEmpleado = () => {
     // Obtener el empleado actual usando el ID de la URL
     const obtenerEmpleado = async () => {
       try {
-        const response = await axios.get(`https://backendadso-9600d18c52e1.herokuapp.com/api/empleados/${id}`);
+        const response = await axios.get(`https://login-backend-lshl.onrender.com/api/empleados/${id}`);
         setEmpleado(response.data);
       } catch (err) {
         console.error('Error al obtener el empleado:', err);
@@ -36,7 +36,7 @@ const EditarEmpleado = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`https://backendadso-9600d18c52e1.herokuapp.com/api/empleados/${id}`, empleado);
+      await axios.put(`https://login-backend-lshl.onrender.com/api/empleados/${id}`, empleado);
       alert('Empleado actualizado correctamente');
       navigate('/empleados'); // Redirigir a la lista de empleados después de la actualización
     } catch (err) {
