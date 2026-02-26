@@ -8,7 +8,7 @@ const Empleados = () => {
   useEffect(() => {
     const obtenerEmpleados = async () => {
       try {
-        const response = await axios.getaxios.get('https://login-backend-lshl.onrender.com/api/empleados');
+        const response = await axios.get('https://login-backend-lshl.onrender.com/api/empleados');
         setEmpleados(response.data);
       } catch (err) {
         console.error('Error al obtener empleados:', err);
